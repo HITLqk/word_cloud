@@ -20,7 +20,7 @@ with open("text2.txt",encoding="utf-8") as f:
     s = f.read()
 print(s)
 ls = jieba.lcut(s) # 生成分词列表
-ls = [word for word in ls if len(word)>4]
+ls = [word for word in ls if len(word)>4] # 在字典中选择长度大于4的词
 text = ' '.join(ls) # 连接成字符串
 stopwords = ["的","是","了"] # 去掉不需要显示的词
 
